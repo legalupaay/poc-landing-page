@@ -136,7 +136,7 @@ header nav ul {
   background-color: var(--primary-color);
   min-height: 100vh;
   color: var(--c4);
-  padding: 4rem 10rem;
+  padding: 4rem 2rem;
   text-align: justify;
 }
 
@@ -149,11 +149,21 @@ header nav ul {
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20vw;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.hire-me-btn {
+  color: var(--primary-color);
+  background-color: #FFFFFF;
+  padding: 0.8em 3.6em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
@@ -324,7 +334,7 @@ section {
 .hire-me-btn {
   color: var(--primary-color);
   background-color: #FFFFFF;
-  padding: 0.8em 3.6em;
+  padding: 0.8em 1.6em;
   font-weight: bold;
   letter-spacing: 0.1em;
   cursor: pointer;
@@ -339,7 +349,6 @@ section {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
@@ -554,9 +563,25 @@ section {
   .lawyerCardMobile {
     margin-bottom: 1rem;
   }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   .lawyerCardMobile {
     margin-bottom: 1rem;
   }
@@ -688,6 +713,14 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
 
