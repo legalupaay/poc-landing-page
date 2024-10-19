@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 :root {
-  --primary-color: #6E00FF;
-  --secondary-color: #FF00FF;
-  --c2: #6700EE;
+  --primary-color: #3681AE;
+  --secondary-color: #3681AE;
+  --c2: #287aadfc;
   --c3: #00F7FF;
-  --c4: #FF64CB;
-  --c5: #E5D5FA;
+  --c4: #e3eaee;
+  --c5: #3680ae28;
   --c6: #3B3B3B;
+  --c7: rgba(0, 0, 0, 0.2);
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: #FCFCFF;
 }
 
 body {
@@ -105,6 +108,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 1em 1.5em;
+  border-bottom: 0.2px solid var(--c7);
 }
 
 header .logoContainer {
@@ -121,15 +125,19 @@ header .logoContainer {
 }
 
 .logo {
-  width: 150px;
+  width: 250px
+}
+
+header nav ul {
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 500px) {
   .textLogo {
-    display: unset;
+    /* display: unset; */
   }
   .logo {
-    display: none;
+    width: 180px;
   }
 }
 
@@ -141,6 +149,7 @@ header nav ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1em;
+  font-size: 0.8rem;
 }
 
 header nav ul a {
@@ -194,6 +203,18 @@ section {
 
 .featured {
   position: relative;
+}
+
+.service {
+  border: 0.2px solid var(--c7);
+  border-radius: 0.4rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  min-width: 50%;
+}
+
+.service-description {
+  font-size: 0.7rem;
 }
 
 .featured img {
@@ -274,10 +295,10 @@ section {
   color: var(--primary-color);
 }
 
-.hire-me .hire-me-btn {
-  background-color: var(--primary-color);
-  color: #FFFFFF;
-  padding: 0.8em 1.6em;
+.hire-me-btn {
+  color: var(--primary-color);
+  background-color: #FFFFFF;
+  padding: 0.8em 3.6em;
   font-weight: bold;
   letter-spacing: 0.1em;
   cursor: pointer;
@@ -290,8 +311,32 @@ section {
   padding: 1em;
 }
 
-.footer p {
-  margin: 0;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20vw;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.support {
+  text-align: left;
+}
+
+.support p {
+  display: flex;
+  gap: 1rem;
+}
+
+.copyright {
+  padding: 0.8rem 0;
+}
+
+.disclamer {
+  font-size: 0.8rem;
+  max-width: 800px;
+  margin: 4rem auto;
 }
 
 .social-footer > ul {
@@ -314,6 +359,106 @@ section {
   color: #fff;
 }
 
+.lawyerCardMobile {
+  /* border: 1px solid var(--secondary-color); */
+  background-color: whitesmoke;
+  color: var(--c6);
+  border-radius: 1rem;
+  padding: 1rem;
+  /* color: text-80; */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.lawyerCardMobile:hover {
+  outline: 1px solid var(--primary-color);
+}
+.lawyerCardMobile .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.lawyerCardMobile .profile .profileImage {
+  width: clamp(10px, 30%, 120px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  /* background-color: text-100; */
+}
+.lawyerCardMobile .profile .profileImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.lawyerCardMobile .profile .name {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+.lawyerCardMobile .profile .name * {
+  margin: 0;
+}
+.lawyerCardMobile .profile .name p {
+  font-size: 0.8rem;
+  /* color: text-60; */
+  margin: 0.2rem 0 0.4rem 0;
+  padding: 0;
+}
+.lawyerCardMobile .profile .name .rateAndRating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secondary-color);
+}
+.lawyerCardMobile .profile .name .rateAndRating .rate {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+.lawyerCardMobile .profile .name .rateAndRating .rate span {
+  margin-left: 0.2rem;
+}
+.lawyerCardMobile .details {
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-right: 1rem;
+}
+.lawyerCardMobile .details .descriptionList .description {
+  /* color: text-100; */
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.4rem;
+}
+.lawyerCardMobile .details .descriptionList .description .tag {
+  font-weight: 600;
+}
+.lawyerCardMobile .details .descriptionList .description .value {
+  /* color: text-60; */
+  margin-left: 0.6rem;
+}
+.lawyerCardMobile .cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.lawyerCardMobile .cta button {
+  border-radius: 2px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.lawyerCardMobile {
+  margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 768px) {
   .floating-button {
     bottom: 40px;
@@ -321,6 +466,9 @@ section {
   }
   .nav-container {
     position: static;
+  }
+  header nav ul {
+    font-size: 1rem;
   }
   .social-footer > ul {
     display: none;
@@ -347,6 +495,8 @@ section {
   }
   .right {
     margin-left: 3em;
+    display: flex;
+    gap: 1rem;
   }
   .portfolio-container > a > img {
     margin-left: 3em;
@@ -360,9 +510,20 @@ section {
   .about .profile img {
     width: 50%;
   }
+  .about__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .lawyerCardMobile {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .lawyerCardMobile {
+    margin-bottom: 1rem;
+  }
   .hero {
     height: 90vh;
   }
@@ -436,29 +597,38 @@ section {
   }
   .hero .content .meet p {
     margin-left: 0.5em;
+    font-size: 1rem;
+    font-weight: 400;
   }
   .hero .hero-design {
     display: unset;
-    margin-left: -50%;
-    margin-top: 25%;
+    color: var(--c6);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero .hero-design p {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.1rem;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 2rem;
   }
   .about__inner {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
-  }
-  .about__inner .profile img {
-    width: 60%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .lawyerCardMobile {
+    margin-bottom: 0;
+  }
   header {
     padding: 1em 1em 1em 10em !important;
   }
@@ -473,6 +643,11 @@ section {
   }
   .footer {
     padding: 2em !important;
+  }
+  .about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
 
