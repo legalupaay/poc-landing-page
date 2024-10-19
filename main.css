@@ -147,6 +147,15 @@ header nav ul {
   margin-bottom: 3rem;
 }
 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 500px) {
   .textLogo {
     /* display: unset; */
@@ -205,6 +214,7 @@ ul > li > a > img {
 
 .meet p {
   margin: 0;
+  margin-bottom: 2.5rem;
 }
 
 .scroll {
@@ -329,9 +339,10 @@ section {
 
 .footer-content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20vw;
+  gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
