@@ -166,6 +166,22 @@ header nav ul {
   cursor: pointer;
 }
 
+.consult {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0.5em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.consult > a {
+  color: var(--c4);
+}
+
 @media screen and (max-width: 500px) {
   .textLogo {
     /* display: unset; */
